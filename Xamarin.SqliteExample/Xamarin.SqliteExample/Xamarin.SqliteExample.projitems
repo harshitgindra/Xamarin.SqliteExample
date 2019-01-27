@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{01D8BD7B-7CC1-4DE7-ADC4-9F069B0CE4AB}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Xamarin.SqliteExample</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ISQLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\SqliteExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\OrderPurchaseRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\OrderRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\OrderModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\OrderPurchaseModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\OrderPurchaseListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AddEditOrderViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AddEditOrderPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\OrderPurchaseListPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\OrderCell.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Helper\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DAL\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+  </ItemGroup>
+</Project>
